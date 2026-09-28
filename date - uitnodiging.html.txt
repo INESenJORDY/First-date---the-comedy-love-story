@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Een kleine vraag...</title>
+<style>
+body{
+font-family: Arial, sans-serif;
+background: linear-gradient(135deg,#ffdf6b,#ffb3c1);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+ 
+.card{
+background:white;
+padding:40px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+max-width:500px;
+}
+ 
+h1{
+color:#e63946;
+}
+ 
+button{
+padding:12px 25px;
+margin:10px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+font-size:16px;
+transition:0.3s;
+}
+ 
+.yes{
+background:#4CAF50;
+color:white;
+}
+ 
+.no{
+background:#e63946;
+color:white;
+position:relative;
+}
+ 
+#result{
+margin-top:20px;
+font-size:18px;
+font-weight:bold;
+color:#333;
+}
+</style>
+</head>
+<body>
+ 
+<div class="card">
+<h1>Hey 😊</h1>
+<p>
+Ik zat te denken...<br><br>
+Zou jij het leuk vinden om binnenkort samen iets te gaan drinken,
+wandelen of iets anders gezelligs te doen?
+</p>
+ 
+<button class="yes" onclick="sayYes()">Ja 😊</button>
+<button class="no" id="noBtn">Nee 😅</button>
+ 
+<div id="result"></div>
+</div>
+ 
+<script>
+function sayYes(){
+document.getElementById("result").innerHTML =
+"Top! 🎉 Dan mag je mij binnenkort vertellen wanneer je tijd hebt deze zaterdag😉";
+}
+ 
+const noBtn = document.getElementById("noBtn");
+ 
+noBtn.addEventListener("mouseover", () => {
+const x = Math.random() * 300 - 150;
+const y = Math.random() * 200 - 100;
+noBtn.style.transform = `translate(${x}px, ${y}px)`;
+});
+</script>
+ 
+</body>
+</html>
